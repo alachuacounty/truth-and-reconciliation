@@ -1,0 +1,45 @@
+/************** MAIN CONTENT STYLES ***************/
+
+h3{
+    font-size: 24px;
+}
+.title{
+    grid-column: 2/3;
+}
+
+.meat-content{
+    grid-column: 2/3;
+}
+.meat-content p{
+    font-size: 18px;
+}
+
+.motions{
+line-height: 2em;
+}
+
+.motions li {
+    margin: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+/* CODE FOR MAIN CONTENT AREA STARTS HERE
+
+#main-section{
+
+    display:grid;
+    grid-template-columns: 22% 1fr 22%;
+
+
+}
+
+#main-content{
+    grid-column: 2/3;
+    
+}
+
+*/
+

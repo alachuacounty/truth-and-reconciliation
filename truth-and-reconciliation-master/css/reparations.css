@@ -1,0 +1,79 @@
+.main{
+    grid-template-columns: 22% 1fr 22%;
+}
+#intro {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+#path{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2/3;
+    grid-row: 2;
+}
+
+/*set each path as the relative container*/
+.path-left{
+    grid-column: 1/2;
+    position: relative;
+}
+.path-right{
+    grid-column: 2/3;
+    position: relative;
+}
+
+.path-img{
+    width: 100%;
+    
+    
+}
+
+/* THIS IS THE OVERLAY FOR THE LEFT PATH  -- CODE FOR THE LEFT PATH IMAGE*/
+.span-text{
+    position: absolute;
+    height: 100%;  
+    width: 100%;   
+    top: 0;   
+    left: 0;
+}
+.text{
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translateY(-50%) translateX(-50%);  
+}
+
+.text p{
+    color: white;
+    border-bottom: solid 3px #9F895D;
+    font-size: 39px;
+}
+
+/* OVERLAY FOR THE RIGHT PATH -- CODE FOR THE RIGHT PATH IMAGE*/
+.span-text-right{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+}
+
+.text-right{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+ }
+ .text p{
+    
+    font-size: 39px;
+}
+
+.para-right{
+    color: white;
+    border-bottom: solid 3px #9F895D;
+    
+        font-size: 39px;
+ }
