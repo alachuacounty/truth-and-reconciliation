@@ -157,12 +157,16 @@
 }
 
 .quote {
+    display: grid;
     grid-column: 2/3;
     margin-bottom: 100px;
     color: #9F895D;
     border-bottom: 1px #9F895D solid;
     line-height: 1.8rem;
     padding: 0 60px;
+}
+.franklin{
+    justify-self: end;
 }
 
 #footer {
