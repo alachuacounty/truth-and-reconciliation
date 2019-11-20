@@ -291,12 +291,7 @@ footer {
 
 
 @media screen and (max-width: 1450px){
-    .menu{
-        padding-right: 25px;
-    }
-    .sub-elements li{
-        padding-right: 25px;
-    }
+  
     .video-content{
         display: grid; 
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -324,13 +319,6 @@ footer {
 
 @media screen and (max-width: 1210px){
 
-    .menu{
-        padding-right: 25px;
-    }
-    .sub-elements li{
-        padding-right: 25px;
-    }
-
     .photo-content{
         display: grid; 
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -345,66 +333,11 @@ footer {
     }
    
 }
-@media screen and (max-width: 1175px){
-
-    .menu{
-        padding-right: 15px;
-    }
-    .sub-elements li{
-        padding-right: 15px;
-    }
-}
-@media screen and (max-width: 1115px){
-
-    .menu{
-        padding-right: 10px;
-    }
-    .sub-elements li{
-        padding-right: 10px;
-    }
-    .elements .menu , .subnav ul li{
-        font-size: 1.3rem;
-    }
-
-}
-
-
 
 /*DESKTOP MEDIA QUERY*/
 @media screen and (max-width: 1024px) {
 
-    a .logo-img {
-        /*! position: relative; */
-        width: 100%;
-        display: block;
-    }
 
-    .elements ul .menu {
-        grid-column: 3/4;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-  
-
-    .sub-elements {
-        grid-template-columns: repeat(auto-fill,minmax(80px,100px));
-        justify-content: center;
-        grid-column: 4/5;
-        margin-top: auto;
-        margin-bottom: auto;
-     
-        /*! margin-left: 25px; */
-    }
-
-    .sub-elements li{
-        justify-self: center;
-    }
-
-    .elements .menu , .subnav ul li{
-
-        font-size: 1.1rem;
-    }
 
     .video-content{
         display: grid; 
