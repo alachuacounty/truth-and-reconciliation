@@ -5,10 +5,7 @@ body {
     font-size: 16px;
     margin: 0;
 }
-.elements .menu , .subnav ul li{
 
-    font-size: 1.3rem;
-}
 .grid-container {
     display: grid;
     grid-template-rows: repeat(3, auto);
