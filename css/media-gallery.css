@@ -33,22 +33,18 @@ body {
     display: grid;
     grid-template-columns: 20% 1fr 20%;
     grid-area: main;
-    padding-top: 3%;
-    padding-bottom: 3%;
 }
 .intro{
     grid-column: 2/3;
 }
 .video-title{
     grid-column: 2/3;
-    padding-top: 3%;
 }
 .video-content{
     display:grid;
     grid-gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-column: 2/3;
-    padding-bottom: 3%;
 }
 .photo-title{
     grid-column: 2/3;
@@ -56,26 +52,20 @@ body {
 .photo-content{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-column: 2/3;
 }
 .map-title{
     grid-column: 2/3;
-    padding-top: 4%;
 }
 .map-content{
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 15px;
     grid-column: 2/3;
 }
 .resource {
     width: 100%;
-}
-.card-text{
-    line-height: 1.4rem;
-    font-weight: bold;
-    padding: 4px;
 }
 
 .shadow{
@@ -125,7 +115,43 @@ body {
     font-weight: bold;
 }
 
+
+
+
+
+
+
+
 /*MAP SECTION*/
+
+
+
+
+
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    right:0;
+    left:0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color:#252525;
+    color:white;
+    height:50px;
+    align-content: center;
+    padding: 0 20%;
+}
+
+
+
+.alachua-info{
+    font-size: 15px;
+    color:white;
+   
+}
+
 
 /*CSS FOR LIGHTBOX*/
 /*
@@ -175,7 +201,7 @@ body {
 .cotton-club-card
 {
     box-shadow: 3px 3px 3px lightgrey;
-  
+    border-radius: 10px;
     transition: all .1s;
     overflow: hidden;
 }
@@ -206,6 +232,31 @@ body {
 
 
 
+
+
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    right:0;
+    left:0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color:#252525;
+    color:white;
+    height:50px;
+    align-content: center;
+    padding: 0 20%;
+}
+
+
+
+.alachua-info{
+    font-size: 15px;
+    color:white;
+   
+}
 
 
 /*CSS FOR LIGHTBOX*/
@@ -287,12 +338,6 @@ body {
 @media screen and (max-width: 1024px) {
 
 
-    #main{
-        display: grid;
-      
-        grid-template-columns: 15% 1fr 15%;
-        grid-area: main;
-    }
 
     .video-content{
         display: grid; 
@@ -337,28 +382,7 @@ body {
     grid-column: 1/4;
 }
 
-
 }
-
-@media screen and (max-width: 480px) {
-    
-
-    #main {
-        grid-area: main;
-        display: grid;
-        grid-template-columns: 5% 1fr 5%;
-        grid-column: 1/4;
-    }
-    .video-content{
-        display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        grid-gap: 15px;
-        grid-column: 2/3; 
-    }
-    
-    
-    }
-
 
 /* TABLET MEDIA QUERY */
 

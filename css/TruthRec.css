@@ -428,24 +428,22 @@ grid-template-rows: repeat(6,1fr);
 
 footer {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-   grid-area: footer;
-   grid-template-areas: 
-   ". alachua-info .";
+    grid-area: footer;
+    grid-template-columns: repeat(12, 1fr);
     width: 100%;
     background-color:#252525;
-  
     color:white;
     height:50px;
     align-content: center;
-    padding: 0 20%;
 }
 
-
+.visit {
+    grid-column: 2/6;
+    
+}
 
 .alachua-info{
-    grid-area: alachua-info;
-    font-size: 15px;
+    font-size: 10px;
     color:white;
    
 }
