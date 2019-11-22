@@ -36,15 +36,18 @@ body {
 }
 .intro{
     grid-column: 2/3;
+    padding-top: 3%;
 }
 .video-title{
     grid-column: 2/3;
+    padding-top: 3%;
 }
 .video-content{
     display:grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-column: 2/3;
+    padding-bottom: 3%;
 }
 .photo-title{
     grid-column: 2/3;
@@ -54,6 +57,7 @@ body {
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-column: 2/3;
+    padding-bottom: 4%;
 }
 .map-title{
     grid-column: 2/3;
@@ -63,6 +67,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 15px;
     grid-column: 2/3;
+    padding-bottom: 4%;
 }
 .resource {
     width: 100%;
@@ -128,29 +133,6 @@ body {
 
 
 
-
-footer {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    right:0;
-    left:0;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    background-color:#252525;
-    color:white;
-    height:50px;
-    align-content: center;
-    padding: 0 20%;
-}
-
-
-
-.alachua-info{
-    font-size: 15px;
-    color:white;
-   
-}
 
 
 /*CSS FOR LIGHTBOX*/
