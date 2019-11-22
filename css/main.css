@@ -233,6 +233,25 @@ a img {
 
 @media screen and (max-width: 480px) {
 
+#truth-rec-info{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "truth-info-head"
+    "truth-info-text";
+}
+.truth-info-head{
+    grid-area: truth-info-head;
+    justify-self: center;
+}
+.truth-info-text{
+    grid-area: truth-info-text;
+margin: 0;
+padding: 5%;
+padding-top: 3%;
+    line-height: 2.5rem;
+ 
+}
+
     .content-text1,
     .content-text2 {
         padding: 0 5%;
