@@ -343,7 +343,28 @@ body {
     grid-column: 1/4;
 }
 
+
 }
+
+@media screen and (max-width: 480px) {
+    
+
+    #main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 5% 1fr 5%;
+        grid-column: 1/4;
+    }
+    .video-content{
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 15px;
+        grid-column: 2/3; 
+    }
+    
+    
+    }
+
 
 /* TABLET MEDIA QUERY */
 
