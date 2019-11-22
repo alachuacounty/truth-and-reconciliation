@@ -406,20 +406,7 @@
 
 /*MAP SECTION*/
 
-footer {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    background-color: #252525;
-    color: white;
-    height: 50px;
-    align-content: center;
-    padding: 0 20%;
-}
 
-.alachua-info {
-    font-size: 15px;
-    color: white;
-}
 /*CSS FOR LIGHTBOX*/
 .lightbox {
     /** Default lightbox to hidden */
