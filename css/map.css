@@ -23,33 +23,7 @@ body {
 .mapouter{
     grid-column: 1/2;
 }
-/*
-footer {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    right:0;
-    left:0;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    background-color:#252525;
-    color:white;
-    height:50px;
-    align-content: center;
-}
 
-.visit {
-    grid-column: 2/6;
-    margin: 0;
-    
-}
-
-.alachua-info{
-    font-size: 15px;
-    color:white;
-   
-}
-*/
 
 @media screen and (max-width: 1024px) {
 
