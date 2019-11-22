@@ -160,3 +160,40 @@ footer {
    
 }
 */
+
+
+@media screen and (max-width: 700px) {
+    
+
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "media"
+        "documents"
+        "landmarks"
+        "links";
+        
+    }
+    .media{
+        grid-area: media
+    }
+    .documents{
+        grid-area: documents;
+    }
+    .landmarks{
+        grid-area: landmarks;
+    }
+    .links{
+        grid-area: ;
+    }
+    .video-content{
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 15px;
+        grid-column: 2/3; 
+    }
+    
+    
+    }
