@@ -14,8 +14,8 @@
     display: grid;
     grid-template-columns: 70% 30%;
     grid-gap: 35px;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 22%;
+    padding-right: 22%;
     padding-bottom: 5%;
     grid-template-areas:
     "breadcrumb breadcrumb"
