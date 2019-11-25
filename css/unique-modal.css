@@ -1,17 +1,19 @@
 
 .modal-body{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
     grid-template-areas:
     "modal-description modal-landmark";
 }
 
 .modal-description{
     grid-area: modal-description;
-    
+    line-height: 2rem;
 }
 
 .modal-landmark{
-    grid-area: modal-description;
+    grid-area: modal-landmark;
+    grid-row: 1/3;
+    width: 100%;
 }
 
