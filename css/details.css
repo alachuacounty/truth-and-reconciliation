@@ -54,3 +54,39 @@
 .details-image img{
     width: 100%;
 }
+
+@media screen and (max-width:800px){
+    .main{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+      
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        grid-template-areas:
+        "breadcrumb"
+        "details-title"
+        "details-image" 
+        "details-text";
+    }
+}
+
+
+
+@media screen and (max-width:600px){
+    .main{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+      
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        grid-template-areas:
+        "breadcrumb"
+        "details-title"
+        "details-image" 
+        "details-text";
+    }
+}
