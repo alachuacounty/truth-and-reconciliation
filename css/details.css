@@ -29,7 +29,7 @@
 
 .breadcrumb{
     grid-area: breadcrumb;
-    background:pink;
+background: pink;
     height: 45px;
 }
 
