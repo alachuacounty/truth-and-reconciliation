@@ -1,0 +1,17 @@
+
+.modal-body{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+    "modal-description modal-landmark";
+}
+
+.modal-description{
+    grid-area: modal-description;
+    
+}
+
+.modal-landmark{
+    grid-area: modal-description;
+}
+

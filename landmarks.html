@@ -6,9 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/TruthRec.css" />
+    <link rel="stylesheet" href="css/unique-modal.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/landmarks.css" />
-    
+
+    <style>
+        .bs-example {
+            margin: 20px;
+        }
+
+        .modal-content iframe {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            /* Get iframe src attribute value i.e. YouTube video url
+            and store it in a variable */
+            var url = $("#cartoonVideo").attr('src');
+
+            /* Assign empty url value to the iframe src attribute when
+            modal hide, which stop the video playing */
+            $("#myModal").on('hide.bs.modal', function () {
+                $("#cartoonVideo").attr('src', '');
+            });
+
+            /* Assign the initially stored url back to the iframe src
+            attribute when modal is displayed again */
+            $("#myModal").on('show.bs.modal', function () {
+                $("#cartoonVideo").attr('src', url);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -94,13 +125,8 @@
 
                 <article class="walls-sign">
                     <div class="image-top">
-                        <a href="details_page.html">
-                            <img src="img/landmark-img/walls.png" class="resource" alt="image of baseball players">
-                        </a>
-
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="img/landmark-img/walls.png" alt="image of baseball players">
+                        <a  data-toggle="modal" data-target="#myModal1">
+                            <img  src="img/landmark-img/walls.png" class="resource" alt="in the shadows image">
                         </a>
                         <div class="shadow-text">
                             <p><strong>Josiah T. Walls</strong></p>
@@ -151,7 +177,6 @@
                         </a>
                         <div class="shadow-text">
                             <p><strong>A. Quinn Jones House</strong></p>
-    
                         </div>
                     </div>
 
@@ -227,10 +252,7 @@
                             <img src="img/landmark-img/berry-six.png" class="resource" alt="image of baseball players">
                         </a>
 
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img7">
-                            <img src="img/landmark-img/berry-six.png" alt="image of baseball players">
-                        </a>
+                    
                         <div class="shadow-text">
                             <p><strong>Serenola Plantation</strong></p>
     
@@ -256,10 +278,7 @@
                             <img src="img/landmark-img/walls-building.png" class="resource" alt="image of baseball players">
                         </a>
 
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img8">
-                            <img src="img/landmark-img/walls-building.png" alt="image of baseball players">
-                        </a>
+                     
                         <div class="shadow-text">
                             <p><strong>Josiah T Walls Building</strong></p>
     
@@ -275,9 +294,7 @@
                         </a>
 
                         <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img9">
-                            <img src="img/landmark-img/newnansville.png" alt="image of baseball players">
-                        </a>
+                     
 
                     <div class="shadow-text">
                         <p><strong>Newnansville</strong></p>
@@ -292,10 +309,37 @@
     <footer id="footer" class="footer">
         <a class="alachua-info" href="#">&copy Alachua County Truth and Reconciliation</a>
 </footer>
+
+
+
+
+  <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE MODAL THREE-->
+  <div class="bs-example">  <!-- Modal HTML -->
+    <div id="myModal1" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Josiah T. Walls</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut perspiciatis, dolor velit molestias temporibus in. Ut repellat officia placeat ipsum!</p>
+                    
+                    <img class="modal-landmark" src="img/landmark-img/walls.png" alt="">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
-<script src="js/truth.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/ash.js"></script>
-
+<script src="js/truth.js"></script>
 
 </html>
