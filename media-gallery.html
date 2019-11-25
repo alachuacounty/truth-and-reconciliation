@@ -6,36 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/media-gallery.css">
     <link rel="stylesheet" href="css/TruthRec.css">
+
     <link rel="stylesheet" type="text/css" media="screen" href="css/media-gallery.css" />
+
+    <style>
+        .bs-example {
+            margin: 20px;
+        }
+
+        .modal-content iframe {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            /* Get iframe src attribute value i.e. YouTube video url
+            and store it in a variable */
+            var url = $("#cartoonVideo").attr('src');
+
+            /* Assign empty url value to the iframe src attribute when
+            modal hide, which stop the video playing */
+            $("#myModal").on('hide.bs.modal', function () {
+                $("#cartoonVideo").attr('src', '');
+            });
+
+            /* Assign the initially stored url back to the iframe src
+            attribute when modal is displayed again */
+            $("#myModal").on('show.bs.modal', function () {
+                $("#cartoonVideo").attr('src', url);
+            });
+        });
+    </script>
 
 </head>
 
 <body>
 
 
-    
+
     <div class="grid-container">
+
+
+
         <!-- CODE FOR NAV BAR-->
         <section class="nav">
             <div class=" grid-item logo">
-        
+
                 <a href="index.html">
                     <img class="logo-img" src="img/truth-logo.png" alt="truth logo">
                 </a>
             </div>
-        
+
             <div class=" grid-item elements">
                 <ul class="element-children">
                     <li class="menu"><a href="about.html">About</a></li>
-                    <li id = "explore" class="menu"><a href="resources.html">Explore
+                    <li id="explore" class="menu"><a href="resources.html">Explore
                             History</a></li>
                     <li class="menu"><a href="reparations.html">Reparations</a></li>
                     <li class="menu"><a href="events.html">Events</a></li>
                     <li class="menu"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-        
+
             <div class="hamburger-menu">
                 <!-- Menu toggle -->
                 <a href="#" class="openModalBtn">
@@ -44,7 +80,7 @@
                     <span class="bar three"></span>
                 </a>
             </div>
-        
+
             <div class="grid-item subnav">
                 <ul class="sub-elements">
                     <li><a href="resources.html">Resources</a></li>
@@ -53,26 +89,26 @@
                 </ul>
             </div>
         </section>
-                <!--CODE FOR THE MODAL CLOSE BUTTON START-->
+        <!--CODE FOR THE MODAL CLOSE BUTTON START-->
 
-                <div id="modal">
-                    <div id="closeModalBtn">
-                   
-                       <a class="on"href="#">
-                            <span class="bar one"></span>
-                            <span class="bar two"></span>
-                            <span class="bar three"></span>
-                        </a> 
-                    </div>
-                    <ul class="modal-children">
-                        <li class="menu1"><a href="about.html">About</a></li>
-                        <li class="menu2"><a href="resources.html">Explore History</a></li>
-                        <li class="menu3"><a href="reparations.html">Reparations</a></li>
-                        <li class="menu4"><a href="events.html">Events</a></li>
-                        <li class="menu5"><a href="contact.html">Contact</a></li>
-                    </ul> 
+        <div id="modal">
+            <div id="closeModalBtn">
 
-                </div>
+                <a class="on" href="#">
+                    <span class="bar one"></span>
+                    <span class="bar two"></span>
+                    <span class="bar three"></span>
+                </a>
+            </div>
+            <ul class="modal-children">
+                <li class="menu1"><a href="about.html">About</a></li>
+                <li class="menu2"><a href="resources.html">Explore History</a></li>
+                <li class="menu3"><a href="reparations.html">Reparations</a></li>
+                <li class="menu4"><a href="events.html">Events</a></li>
+                <li class="menu5"><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
         <section id="main">
             <div class="grid-item intro">
                 <h1>Media Gallery</h1>
@@ -94,8 +130,9 @@
                 <!--CODE FOR VIDEO CARDS START HERE-->
                 <article class="shadow-plantations-card">
                     <div class="image-top-left">
-                        <a href="#img1">
-                            <img src="img/shadows.png" class="resource" alt="in the shadows image">
+                        <!-- CODE FOR MODAL-->
+                        <a  data-toggle="modal" data-target="#myModal1">
+                            <img data-toggle="modal" src="img/shadows.png" class="resource" alt="in the shadows image">
                         </a>
 
                     </div>
@@ -104,30 +141,29 @@
                         <p><strong>In the Shadows of Plantations </strong></p>
                         <p>30:00</p>
                     </div>
+
+
                 </article>
 
                 <article class="bo-diddley-card">
                     <div class="image-top-left">
-                        <a href="#img2">
+                        <a   data-toggle="modal" data-target="#myModal1">
                             <img src="img/bo-diddley.png" class="resource" alt="image of Bo Diddley">
                         </a>
-                       
-                        <!-- lightbox container hidden with CSS 
-                        <a href="#_" class="lightbox" id="img2">
-                            <img src="img/bo-diddley.png" alt="image of Bo Diddley">
-                        </a>
-                    -->
+
                     </div>
-               
+
                     <div class="card-text">
                         <p><strong>Bo Diddley Memorial 2008</strong></p>
                         <p>08:21</p>
                     </div>
+
                 </article>
+
 
                 <article class="baseball-card">
                     <div class="image-top">
-                        <a href="#img3">
+                        <a   data-toggle="modal" data-target="#myModal1">
                             <img src="img/baseball-league.png" class="resource" alt="image of baseball players">
                         </a>
 
@@ -147,7 +183,7 @@
 
                 <article class="verdell-washington-card">
                     <div class="image-top">
-                        <a href="#img4">
+                        <a   data-toggle="modal" data-target="#myModal1">
                             <img src="img/verdell.png" class="resource" alt="image of Verdell Washington">
                         </a>
 
@@ -166,7 +202,7 @@
 
                 <article class="freedom-ride-card">
                     <div class="image-top">
-                        <a href="#img5">
+                        <a   data-toggle="modal" data-target="#myModal1">
                             <img src="img/freedon-ride.png" class="resource" alt="image of a lady on a bus">
                         </a>
 
@@ -186,8 +222,9 @@
 
                 <article class="cotton-club-card">
                     <div class="image-top">
-                        <a href="#img6">
-                            <img src="img/cotton-club.png" class="resource" alt="image of chari person of cotton club museum">
+                        <a   data-toggle="modal" data-target="#myModal1">
+                            <img src="img/cotton-club.png" class="resource"
+                                alt="image of chari person of cotton club museum">
                         </a>
 
                         <!-- lightbox container hidden with CSS 
@@ -207,67 +244,54 @@
             <!--CODE FOR VIDEO SECTION ENDS HERE-->
 
 
-            <!--PIC SECTION STARTS-->
+            <!-----------------------------------PIC SECTION STARTS-------------------------------------------------->
             <div class="photo-title">
                 <h1>Photos</h1>
             </div>
             <section class="photo-content">
                 <article class="house">
                     <div class="image-top-left">
-                        <a href="#img1">
-                            <img src="img/row-1-1.png" class="thumbnail">
-                        </a>
+                            <a data-toggle="modal" data-target="#myModal1">
+                                    <img src="img/row-1-2.png" class="thumbnail">
+                                </a>
 
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="img/row-1-1.png">
-                        </a>
                     </div>
                 </article>
 
                 <article class="second">
                     <div class="image-top-left">
-                        <a href="#img1">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img src="img/row-1-2.png" class="thumbnail">
-                        </a>
-
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="img/row-1-2.png">
                         </a>
                     </div>
                 </article>
 
                 <article class="horse">
                     <div class="image-top">
-                        <a href="#img1">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img src="img/horse.png" class="thumbnail">
                         </a>
 
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="img/horse.png">
-                        </a>
                     </div>
                 </article>
 
                 <article class="barn-house">
                     <div class="image-top-left">
-                        <a href="img/row-1-4.png">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img class="resource" src="img/row-1-4.png" alt="Image-left">
                         </a>
                     </div>
                 </article>
                 <article class="second-row-first-img">
                     <div class="image-top-left">
-                        <a href="img/row-2-1.png">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img class="resource" src="img/row-2-1.png" alt="Image-left">
                         </a>
                     </div>
                 </article>
 
                 <article class="second-row-second-img">
-                    <div class="image-top-left">
+                    <div data-toggle="modal" data-target="#myModal1">
                         <a href="img/row-2-2.png">
                             <img class="resource" src="img/row-2-2.png" alt="Image-left">
                         </a>
@@ -275,14 +299,14 @@
                 </article>
                 <article class="second-row-third-img">
                     <div class="image-top-left">
-                        <a href="img/row-2-3.png">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img class="resource" src="img/row-2-3.png" alt="Image-left">
                         </a>
                     </div>
                 </article>
                 <article class="second-row-fourth-img">
                     <div class="image-top-left">
-                        <a href="img/row2-4.png">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img class="resource" src="img/row2-4.png" alt="Image-left">
                         </a>
                     </div>
@@ -290,28 +314,28 @@
                 <!--3RD ROW BEGINS HERE-->
                 <article class="third-row-first-img">
                     <div class="image-top-left">
-                        <a href="img/row-3-1.png">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img class="resource" src="img/row-3-1.png" alt="Image-left">
                         </a>
                     </div>
                 </article>
                 <article class="third-row-second-img">
                     <div class="image-top-left">
-                        <a href="img/row-3-2.png">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img class="resource" src="img/row-3-2.png" alt="Image-left">
                         </a>
                     </div>
                 </article>
                 <article class="third-row-third-img">
                     <div class="image-top-left">
-                        <a href="img/row-3-3.png">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img class="resource" src="img/row-3-3.png" alt="Image-left">
                         </a>
                     </div>
                 </article>
                 <article class="third-row-fourth-img">
                     <div class="image-top-left">
-                        <a href="img/row-3-4.png">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img class="resource" src="img/row-3-4.png" alt="Image-left">
                         </a>
                     </div>
@@ -319,6 +343,7 @@
             </section>
 
 
+              <!-----------------------------------PIC SECTION ends-------------------------------------------------->
             <!--HISTORYIC MAP SECTION-->
 
             <div class="grid-item map-title">
@@ -327,67 +352,221 @@
             <section class="map-content">
                 <article class="first-map">
                     <div>
-                        <a href="#img1">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img src="img/map1.png" class="thumbnail">
 
                         </a>
                         <p class="dates">1865</p>
-
-
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="img/map1.png">
-                        </a>
                     </div>
                 </article>
 
                 <article class="second-map">
                     <div>
-                        <a href="#img1">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img src="img/map2.png" class="thumbnail">
                         </a>
                         <p class="dates">1897</p>
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="img/map2.png">
-                        </a>
+                
                     </div>
                 </article>
 
                 <article class="third-map">
                     <div>
-                        <a href="#img1">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img src="img/map3.png" class="thumbnail">
                         </a>
                         <p class="dates">1902</p>
 
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="img/map3.png">
-                        </a>
                     </div>
                 </article>
 
                 <article class="fourth-map">
                     <div>
-                        <a href="#img1">
+                        <a data-toggle="modal" data-target="#myModal1">
                             <img src="img/map4.png" class="thumbnail">
                         </a>
                         <p class="dates">1916</p>
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="img/map4.png">
-                        </a>
+              
                     </div>
                 </article>
-
             </section>
+
         </section>
 
-       
-    
+
+
 
     </div>
+    <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE MODAL ONE-->
+    <div class="bs-example">  <!-- Modal HTML -->
+        <div id="myModal1" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">YouTube Video</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <iframe width="100%" height="400px"
+                            src="https://www.youtube.com/embed/HDfJ8msGESM" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE-->
+
+         <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE MODAL TWO-->
+    <div class="bs-example">  <!-- Modal HTML -->
+        <div id="myModal2" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">YouTube Video</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <iframe width="100%" height="400px"
+                            src="https://www.youtube.com/embed/HDfJ8msGESM" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE-->
+
+              <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE MODAL THREE-->
+    <div class="bs-example">  <!-- Modal HTML -->
+        <div id="myModal3" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">YouTube Video</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <iframe width="100%" height="400px"
+                            src="https://www.youtube.com/embed/HDfJ8msGESM" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE-->
+
+                   <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE MODAL FOUR-->
+    <div class="bs-example">  <!-- Modal HTML -->
+        <div id="myModal4" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">YouTube Video</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <iframe width="100%" height="400px"
+                            src="https://www.youtube.com/embed/HDfJ8msGESM" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE-->
+
+
+                   <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE MODAL FIVE-->
+    <div class="bs-example">  <!-- Modal HTML -->
+        <div id="myModal5" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">YouTube Video</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <iframe width="100%" height="400px"
+                            src="https://www.youtube.com/embed/HDfJ8msGESM" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE-->
+
+
+                   <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE MODAL SIX-->
+    <div class="bs-example">  <!-- Modal HTML -->
+        <div id="myModal6" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">YouTube Video</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <iframe width="100%" height="400px"
+                            src="https://www.youtube.com/embed/HDfJ8msGESM" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- GOT THE CODE FOR MODAL PLACE AND CALLED HERE-->
+
+
+     <div class="bs-example">  <!-- Modal HTML -->
+        <div id="img1" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">YouTube Video</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <iframe width="100%" height="400px"
+                            src="https://www.youtube.com/embed/HDfJ8msGESM" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- IMAGE MODALS GOES HERE-->
 
     <footer id="footer" class="footer">
         <a class="alachua-info" href="#">&copy Alachua County Truth and Reconciliation</a>
@@ -395,6 +574,9 @@
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
-<script src="js/truth.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/ash.js"></script>
+<script src="js/truth.js"></script>
 </html>
