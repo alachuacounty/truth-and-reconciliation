@@ -1,10 +1,5 @@
 
 /* STYLES FOR 1024 AND LARGER*/
-body {
-    font-family: Arial serif;
-    font-size: 20px;
-    margin: 0;
-}
 
 .grid-container {
     display: grid;
@@ -15,10 +10,12 @@ body {
         "footer"
 }
 #map{
+    width: 100%;
+    height: calc(100vh - 180px);
+    background-color: grey;
     grid-area: map;
     display: grid;
-    grid-template-columns: 1fr;
-    
+    grid-template-columns: 1fr; 
 }
 .mapouter{
     grid-column: 1/2;
