@@ -10,14 +10,14 @@
                 moreDetailsURL: "/details_page.html",
                 locationImage: "img/Intersection 23.png",
                 LatLng: [{
-                  lat:29.8050, lng:-82.4798
+                lat:29.8050, lng:-82.4798
                 }]
             },
             {
                 placeName: "Newnansville (2)",
                 details: "Newnansville (2) Lorem ipsum dolor sit amet, vix mutat posse suscipit id, vel ea tantas omittam detraxit.",
                 LatLng: [{
-                  lat:29.8051, lng:-82.4800
+                lat:29.8051, lng:-82.4800
                 }]
             },
             {
@@ -62,7 +62,7 @@
                 moreDetailsURL: "/details_page.html",
                 locationImage: "img/Intersection 23.png",
                 LatLng: [{
-                  lat:29.5964, lng:-82.2178
+                lat:29.5964, lng:-82.2178
                 }]
             },
             {
@@ -89,7 +89,7 @@
                 moreDetailsURL: "/details_page.html",
                 locationImage: "img/Intersection 23.png",
                 LatLng: [{
-                  lat:29.8269, lng:-82.5968
+                lat:29.8269, lng:-82.5968
                 }]
             },
             {
