@@ -113,6 +113,29 @@
 
 @media screen and (max-width:480px){
     .image-grid {
-        grid-template-columns: 1fr;
+        
+        grid-template-rows: repeat(1, 1fr);
+        margin-top: 10%;
+        grid-gap: 2%;
+    }
+    .media{
+        display: grid;
+        grid-row: 1/2;
+        margin: 0;
+    }
+    .documents{
+        display: grid;
+        grid-row: 2/3;
+        margin:0;
+    }
+    .landmarks{
+        display: grid;
+        grid-row: 3/4;
+        margin: 0;
+    }
+    .links{
+        display: grid;
+        grid-row: 4/5;
+        margin:0;
     }
 }

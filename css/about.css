@@ -41,7 +41,9 @@ ol {
     text-align: right;
     content: counter(item) ".";
   }
-  
+ ul.a {
+      list-style-type: none;
+  }
 
 
 
