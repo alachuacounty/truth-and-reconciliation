@@ -138,4 +138,19 @@
         grid-row: 4/5;
         margin:0;
     }
+    .text-2{
+        display: none;
+        
+     }
+     
+     .text-2 p{
+         font-size: 10px;
+    
+     }
+     .description-text{
+         font-size: 10px;
+     }
+     .text p {
+         font-size: 23px;
+     }
 }
