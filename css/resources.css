@@ -153,4 +153,10 @@
      .text p {
          font-size: 23px;
      }
+     .main {
+        grid-template-columns: 10% 1fr 10%;
+        margin-top: 8px;
+        margin-bottom: 29px;
+     }
+
 }
