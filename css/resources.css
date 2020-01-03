@@ -176,7 +176,8 @@ p{
         margin-block-start: 0;
         margin-block-end: 0;
         margin-inline-end: 0;
-        margin-inline-start: 272px;
+        margin-inline-start: 0px;
+        text-align: center;
 
 
      }
@@ -234,7 +235,8 @@ p{
             margin-block-start: 0;
             margin-block-end: 0;
             margin-inline-end: 0;
-            margin-inline-start: 272px;
+            margin-inline-start: 0px;
+            text-align: center;
     
     
          }
@@ -292,9 +294,9 @@ p{
             margin-block-start: 0;
             margin-block-end: 0;
             margin-inline-end: 0;
-            margin-inline-start: 69px;
+            margin-inline-start: 0px;
+            text-align: center;
     
     
          }
-
-}
+     }
