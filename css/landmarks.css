@@ -41,8 +41,8 @@
 .map-img,
 .pleasant,
 .map-card,
-.walls-building,
-.newnan{
+.wallB,
+.newnansvile{
     box-shadow: 3px 3px 3px lightgrey;
     border-radius: 10px;
     transition: all .1;
@@ -71,10 +71,10 @@
 .map-card:hover{
     transform: scale(1.1);
 }
-.walls-building:hover{
+.wallB:hover{
     transform: scale(1.1);
 }
-.newnan:hover{
+.newnansvile:hover{
     transform: scale(1.1);
 }
 .map-img:hover{
