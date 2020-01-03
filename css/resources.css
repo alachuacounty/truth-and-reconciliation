@@ -10,7 +10,7 @@
     display: -ms-grid;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
-    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-columns: repeat(auto-fit, minmax(40%, 48%));
 }
 .image-grid > *, .image-grid a {
     display: block;
