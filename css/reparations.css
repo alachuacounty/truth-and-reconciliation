@@ -1,9 +1,12 @@
 .main{
     grid-template-columns: 22% 1fr 22%;
+    -ms-grid-columns: 22% 1fr 22% ;
 }
 #intro {
     grid-column: 2/3;
     grid-row: 1;
+    -ms-grid-rows: 1;
+    -ms-grid-column: 2;
 }
 
 #path{
@@ -12,16 +15,23 @@
     grid-template-columns: 1fr 1fr;
     grid-column: 2/3;
     grid-row: 2;
+    -ms-grid-columns:1fr 1fr ;
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+
+    display: -ms-grid;
 }
 
 /*set each path as the relative container*/
 .path-left{
     grid-column: 1/2;
     position: relative;
+    -ms-grid-column: 1;
 }
 .path-right{
     grid-column: 2/3;
     position: relative;
+    -ms-grid-column: 2;
 }
 
 .path-img{
@@ -84,15 +94,25 @@
         grid-template-rows: 1fr 1fr;
         grid-column: 2/3;
         grid-row: 2;
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+        display: -ms-grid;
+        -ms-grid-rows:1fr 1fr ;
+        
+        
+
     }
     .path-left{
         grid-row: 1/2;
         position: relative;
+        -ms-grid-row: 1;
     }
     .path-right{
         grid-row: 2/3;
         position: relative;
         grid-column: 1/2;
+        -ms-grid-row: 2;
+        -ms-grid-column:1 ;
     }
     .text p{
         font-size: 15px;

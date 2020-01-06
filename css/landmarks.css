@@ -1,35 +1,46 @@
 /* CHILDREN ELEMENTS*/
 .title{
     grid-column: 2/3;
+    -ms-grid-column: 2;
 }
 .first-intro{
     grid-column: 2/3;
+    -ms-grid-column: 2;
 }
 .markers, .register-sites, .noteworthy-locations, .map{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 23%));
     grid-column: 2/3;
     grid-gap: 20px;
+    display: -ms-grid;
+    -ms-grid-column:repeat(auto-fit, minmax(180px, 23%)) ;
+    -ms-grid-column: 2;
     
 }
 .second-intro{
     grid-column: 2/3;
+    -ms-grid-column: 2;
 }
 .register-sites{
     grid-column: 2/3;
+    -ms-grid-column: 2;
     
 }
 .third-intro{
     grid-column: 2/3;;
+    -ms-grid-column: 2;
 }
 .map{
     grid-column: 2/3;
+    -ms-grid-column: 2;
 }
 .fourth-intro{
     grid-column: 2/3;
+    -ms-grid-column: 2;
 }
 .noteworthy-locations{
     grid-column: 2/3;
+    -ms-grid-column: 2;
 }
 
 /*WRAPPER FOR THE CARDS, BOX SHADOW*/
